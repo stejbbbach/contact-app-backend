@@ -3,7 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import router from './routes';
+import router from './routes/index';
+import connectToMongoDB from './config/db';
 
 dotenv.config();
 
@@ -17,10 +18,13 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(helmet());
 
-//routes
-app.use('/', router);
+//routes/
+app.use('/api', router);
 
 //mongo
+connectToMongoDB().then(() => {
+    console.log('Connected to MongoDB');
+});
 
 //server start
 app.listen(port, () => {
