@@ -80,7 +80,6 @@ export const partialUpdateUser = async (req: Request, res: Response) => {
     }
 };
 
-// Partially update multiple users
 export const partialUpdateManyUsers = async (req: Request, res: Response) => {
     try {
         const { filter, update } = req.body;

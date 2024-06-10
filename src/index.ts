@@ -18,7 +18,7 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(helmet());
 
-//routes/
+//routes
 app.use('/api', router);
 
 //mongo

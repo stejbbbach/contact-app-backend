@@ -1,0 +1,8 @@
+//todo
+
+dodac middleware
+dodac autoryzacje
+dodac oauth
+dodac pozostale modele, kontrollery i routery (te najwazniejsze tbh)
+zobaczyc czy rejestracja i login wymaga zmiany kodu w backendzie
+dodac obsluge tokenow (chyba?)
